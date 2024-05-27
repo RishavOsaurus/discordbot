@@ -27,5 +27,8 @@ func create(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if arg[0] == "prawin" {
 		createExcuse(s, m)
 	}
+	if arg[0] == "waka" {
+		wakatime(s, m, arg)
+	}
 
 }
