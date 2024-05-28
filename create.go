@@ -20,14 +20,15 @@ func create(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if len(arg) == 0 {
 		return
 	}
-	if arg[0] == "role" {
+	if arg[0] == "role" && len(arg) == 3 {
 		createRole(s, m, arg)
 	}
 
-	if arg[0] == "prawin" {
+	if arg[0] == "prawin" && len(arg) == 1 {
 		createExcuse(s, m)
+
 	}
-	if arg[0] == "waka" {
+	if arg[0] == "waka" && len(arg) <= 3 {
 		wakatime(s, m, arg)
 	}
 
